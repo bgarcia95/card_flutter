@@ -12,33 +12,39 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Row(
-            //crossAxisAlignment is for horizontal
-            //mainAxisAlignment is for vertical
-            // the following line is useful when you want the column to use the full screen from left-to-right or from top-to-bottom
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.white,
-                child: Text('Container 1'),
-              ),
-              SizedBox(
-                //height will be used with Column and width will be used with Row
-                width: 20.0,
-              ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
-                child: Text('Container 2'),
-              ),
-              SizedBox(
-                //height will be used with Column and width will be used with Row
-                width: 20.0,
-              ),
+              //Red container
               Container(
                 width: 100.0,
                 color: Colors.red,
-                child: Text('Container 3'),
+              ),
+              //Middle Container with the two boxes
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    //Yellow Container
+                    Container(
+                      width: 100.0,
+                      height: 100.0,
+                      color: Colors.yellow,
+                    ),
+                    //Green container
+                    Container(
+                      child: Container(
+                        width: 100.0,
+                        height: 100.0,
+                        color: Colors.green,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //Blue Container
+              Container(
+                width: 100.0,
+                color: Colors.blue,
               ),
             ],
           ),
